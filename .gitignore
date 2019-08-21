@@ -1,0 +1,23 @@
+# Emacs backups
+*~
+
+# IntelliJ IDEA / PyCharm
+.idea/
+*.iml
+
+# Generated jsdoc directory
+jsdoc-gen/
+
+# Log files
+*.log
+
+# Node modules
+node_modules/
+
+# tmp directories everywhere
+tmp/
+
+# Personal information
+personal-info/
+
+
