@@ -92,7 +92,6 @@ So, after installing nvm you can install the [Node](https://nodejs.org/en/) (and
 
 I use [Yarn](https://yarnpkg.com/lang/en/) package manager instead of [npm](https://www.npmjs.com/). The reason for that is not that I favor Yarn over Npm but just because my current team is using Yarn and I wanted to have it in this personal project also for learning purposes.
 
-
 This is a one time task and the local npm packages can be read in the [package.json](package.json) file (and the actual packages are in the node_modules directory, of course, not in the Git repo, you need to install them yourself, see later). So, you don't have to do this part, I just documented these steps for myself. First create package.json using command "yarn init".
 
 Then install the following packages (using command ```yarn add <package>```):

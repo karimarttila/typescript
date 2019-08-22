@@ -3,5 +3,20 @@
   "version": "1.0.0",
   "description": "Simple Server Typescript version",
   "repository": "https://github.com/karimarttila/typescript",
-  "author": "Kari Marttila"
+  "author": "Kari Marttila",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/jsonwebtoken": "^8.3.3",
+    "@types/ramda": "^0.26.19",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1",
+    "tslint": "^5.19.0",
+    "typescript": "^3.5.3"
+  }
 }
