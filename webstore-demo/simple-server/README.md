@@ -12,6 +12,7 @@
   - [Express](#express)
   - [Static Code Analysis - TSLint](#static-code-analysis---tslint)
   - [Unit Testing - Mocha](#unit-testing---mocha)
+  - [Logging](#logging)
   - [Command Line](#command-line)
   - [Hot Code Reloading](#hot-code-reloading)
   - [Node REPL](#node-repl)
@@ -141,6 +142,17 @@ SS_LOG_LEVEL=trace ./node_modules/.bin/mocha --grep "GET /product-groups" test/w
 ```
 
 Mocha was a real suprise to be used with Typescript/Node - must be one of the easiest and intuitive unit testing frameworks I have ever used in any language.
+
+### Logging
+
+In this Typescript implementation I decided to switch the logger. In the Javascript version I had used [simple-node-logger](https://www.npmjs.com/package/simple-node-logger). Since my new team was using [pino](https://www.npmjs.com/package/pino) and since I wrote this Typescript version of Simple Server for learning purposes specifically for that project I decided to use pino. Pino has various extensions, one of them a prettyfier: [pino-pretty](https://www.npmjs.com/package/pino-pretty). You shouldn't use pino-pretty in production, though, only in development. A test run:
+
+```bash
+SS_MODE=dev SS_LOG_LEVEL=trace ts-node test/util/logger-test.ts 
+```
+
+As a result of the pino prettyfier you get nicely colored log messages with human readable timestamps.
+
 
 
 ### Command Line
