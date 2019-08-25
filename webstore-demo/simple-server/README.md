@@ -10,6 +10,8 @@
   - [Basic Tools - Nvm, Npm and Node](#basic-tools---nvm-npm-and-node)
   - [Npm Installations using Yarn](#npm-installations-using-yarn)
   - [Express](#express)
+  - [Watching Typescript Code](#watching-typescript-code)
+  - [Transpiling Typescript](#transpiling-typescript)
   - [Static Code Analysis - TSLint](#static-code-analysis---tslint)
   - [Unit Testing - Mocha](#unit-testing---mocha)
   - [Logging](#logging)
@@ -119,6 +121,25 @@ The web framework used to implement the Simple Server is [express](https://expre
 
 See more in [server.ts](src/webserver/server.ts).
 
+### Watching Typescript Code
+
+I configured two watch tools for watching the Typescript code while developing: Typescript Transpiler and TSLinter. You should have two terminals in another monitor and run the watch jobs in those terminals to see in real time all transpiler and linter errors and warnings. See following chapters the commands that you should run in terminals for watching transpiler and linter. 
+
+Visual Studio Code also uses the tslint.json configuration file and shows linter warnings. 
+
+### Transpiling Typescript
+
+I used [typescript](https://www.npmjs.com/package/typescript) transpiler ```tsc```.
+
+TODO: Explain [tsconfig.json](tsconfig.json).
+
+TODO: Explain the scripts in [package.json](package.json).
+
+Watch **tsc transpiler** in console:
+```bash
+yarn watch-tsc
+```
+
 
 ### Static Code Analysis - TSLint
 
@@ -126,6 +147,14 @@ I used [TSLint](https://www.npmjs.com/package/tslint) TODO.
 
 I also used the [TSLint extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin) in Visual Studio Code. 
 
+TODO: Explain [tslint.json](tslint.json).
+
+TODO: Explain the scripts in [package.json](package.json).
+
+Watch **tslint** in console:
+```bash
+yarn watch-tslint
+```
 
 
 ### Unit Testing - Mocha

@@ -1,7 +1,7 @@
-import * as pino from "pino";
- 
-const ssLogLevel = process.env.SS_LOG_LEVEL || 'info';
-const ssMode = process.env.SS_MODE || 'prod';
+import pino from "pino";
+
+const ssLogLevel = process.env.SS_LOG_LEVEL || "info";
+const ssMode = process.env.SS_MODE || "prod";
 
 // NOTE: Using pino-pretty is not recommended in production!
 
@@ -9,9 +9,10 @@ const pinoDevOptions = {
   level: ssLogLevel,
   prettyPrint: {
     colorize: true,
-    translateTime: true
-  }
+    translateTime: true,
+  },
 };
+
 
 const pinoProdOptions = {
   level: ssLogLevel,

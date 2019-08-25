@@ -1,6 +1,9 @@
 # Emacs backups
 *~
 
+# Distributable
+dist/
+
 # IntelliJ IDEA / PyCharm
 .idea/
 *.iml

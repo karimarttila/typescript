@@ -4,7 +4,18 @@
   "description": "Simple Server Typescript version",
   "repository": "https://github.com/karimarttila/typescript",
   "author": "Kari Marttila",
+  "scripts": {
+    "start": "node dist/webserver/server.js",
+    "build": "rm -rf dist/ && tsc",
+    "tslint": "tslint --force -t stylish src/**/*.ts",
+    "tslint-watch-npm": "npm run tslint",
+    "watch-tslint": "nodemon --exec 'npm run tslint-watch-npm || exit 1'",
+    "watch-tsc": "tsc -w",
+    "watch-nodemon": "nodemon dist/webserver/server.js",
+    "watch": "concurrently -k -p \"SS\" -n \"TypeScript,Node\" \"npm run watch-tsc\" \"npm run watch-nodemon\""
+  },
   "dependencies": {
+    "config": "^3.2.2",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "pino": "^5.13.2",
@@ -16,6 +27,7 @@
     "@types/pino": "^5.8.9",
     "@types/ramda": "^0.26.19",
     "chai": "^4.2.0",
+    "concurrently": "^4.1.2",
     "mocha": "^6.2.0",
     "nodemon": "^1.19.1",
     "pino-pretty": "^3.2.1",
